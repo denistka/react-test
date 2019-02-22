@@ -14,7 +14,7 @@ const store = createStore(
 );
 
 render(
-    <Provider store={store}>
+    <Provider store={ store }>
         <HashRouter>
             <App/>
         </HashRouter>

@@ -8,6 +8,7 @@ class TagDescription extends React.Component {
         const { dispatch } = this.props;
         dispatch(getTagInfo(this.props.id))
     }
+
     render() {
         return (
             <TagFullInfo { ...this.props }/>
