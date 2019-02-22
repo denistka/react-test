@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 const Tag = ({ id, label, sentimentScore }) => (
             <li style={{
-                fontSize: sentimentScore / 100 + 'em',
-                animationDelay: Math.random() * 2 + 's',
-                animationDuration: (Math.random() * 7 + 7) + 's'
+                fontSize: `${ sentimentScore / 100 }em`,
+                animationDelay: `${ Math.random() * 2 }s`,
+                animationDuration: `${ Math.random() * 7 + 7 }s`
             }}>
                 <Link to={ id }>
                     { label }
