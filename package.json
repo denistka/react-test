@@ -1,0 +1,52 @@
+{
+  "name": "tags-cloud",
+  "version": "1.0.0",
+  "description": "tags-cloud",
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.prod.js  --colors",
+    "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
+  },
+  "author": {
+    "name": "Denis Baranov",
+    "email": "denistka@gmail.com"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.8",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^4.0.0-beta.2",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "cross-fetch": "^3.0.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "prop-types": "^15.7.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

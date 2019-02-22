@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400');
+
+$body-text-color: #707070;
+$body-font-family: 'Dosis', sans-serif;
+$links-color: #2167a4;
+$highlight-text-color: #42608f;
+$tag-background-color: #fbf6f6;
+
+* {
+  margin: 0;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 10px;
+  @media screen and (max-width: 640px) {
+    font-size: calc(10 * 100 / 640  * 1vw);
+  }
+}
+
+body {
+  color: $body-text-color;
+  font-family: $body-font-family;
+  align-items: center;
+}
+
+.app-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a {
+  color: $links-color;
+}
+
+header {
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  font-size: 1.6rem;
+  padding: 1rem;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.tags-cloud {
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    max-width: 30em;
+    margin: auto;
+    padding: 5em;
+    animation-name: heartBeat;
+    animation-iteration-count: infinite;
+    animation-duration: 27s;
+    animation-timing-function: ease-in-out;
+  }
+
+  li {
+    padding: 0.4rem 0.5rem;
+    height: 1em;
+    cursor: pointer;
+    line-height: 1em;
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    opacity: 0.2;
+    &:hover {
+      animation-play-state: paused;
+      opacity: 1;
+    }
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.tag-full-info {
+  text-align: left;
+  max-width: 60em;
+  margin: 0 auto;
+
+  span {
+    padding: 0 .5rem;
+  }
+
+  span.field-name {
+    font-size: 1.6rem;
+    display: inline-block;
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: right;
+    width: 13rem;
+  }
+
+  span.value {
+    color: $highlight-text-color;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    &--tag{
+      font-size: 1.6rem;
+      background: $tag-background-color;
+      border-radius: .5rem;
+      margin: 0 .1rem;
+    }
+  }
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  25% {
+    transform: scale(0.90);
+  }
+
+  50% {
+    transform: scale(0.98);
+  }
+
+  75% {
+    transform: scale(0.90);
+  }
+
+  95% {
+    transform: scale(0.98);
+  }
+
+  to {
+    transform: scale(0.99);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  14% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+
+  28% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  42% {
+    opacity: 0.8;
+    transform: scale(0.96);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  85% {
+    opacity: 0.8;
+    transform: scale(0.97);
+  }
+
+  95% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
