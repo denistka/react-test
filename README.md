@@ -1,6 +1,7 @@
 # React with Redux test 
 
-Implementation of JS class for helping build svg animation. Based on anime.js  
+Simple React app using Redux
+
 
 
 ### Installation
