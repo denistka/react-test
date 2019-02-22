@@ -10,12 +10,12 @@ export const setTags        = items => ({ type: SUCCESS_TAGS, items });
 export const setSelectedTag = id    => ({ type: SELECT_TAG, id });
 
 
-const fakeListRequest = () => fetch('public/data/tags.json');
+const tagListRequest = () => fetch('public/data/tags.json');
 
 export const getTagsList = () => (dispatch, getState) => {
     if (!getState().tags.items.length){
         dispatch(requestTag());
-        return fakeListRequest()
+        return tagListRequest()
             .then(response => response.json())
             .then(json => dispatch(setTags(json)))
     }
@@ -24,7 +24,7 @@ export const getTagsList = () => (dispatch, getState) => {
 export const getTagInfo = (id) => (dispatch, getState) => {
     if (!getState().tags.items.length){
         dispatch(requestTag());
-        return fakeListRequest()
+        return tagListRequest()
             .then(response => response.json())
             .then(json => {
                 dispatch(setTags(json));
