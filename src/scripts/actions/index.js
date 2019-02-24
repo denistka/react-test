@@ -1,4 +1,5 @@
-import api from '../api'
+import api from '../api';
+
 export const REQUEST_TAGS   = 'REQUEST_TAGS';
 export const SUCCESS_TAGS   = 'SUCCESS_TAGS';
 export const SELECT_TAG     = 'SELECT_TAG';
